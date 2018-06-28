@@ -1,0 +1,130 @@
+
+html, body {
+    height: 100%;
+}
+body {
+    margin: 0;
+}
+.flex-container {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.form {
+  flex:1;
+}
+
+.main-logo {
+  width: 20em;
+}
+
+.social-links {
+  font-size: 3em;
+
+}
+.social-link {
+  -webkit-transition-duration: 0.4s; /* Safari */
+   transition-duration: 0.4s;
+   -webkit-text-stroke-width: 2px;
+   -webkit-text-stroke-color: black;
+  padding:20px;
+  color: #EEEEEE;
+}
+.social-link:hover {
+  outline: none;
+  color: #DDDDDD;
+}
+.social-link:active {
+  outline: none;
+  color: #54C2ED;
+}
+
+p {
+  margin-top: 0;
+  font-family: 'Dosis', sans-serif;
+  font-weight:300;
+  font-size: 2em;
+  max-width: 40em;
+
+}
+input[type=email] {
+   -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-family: 'Dosis', sans-serif;
+    font-weight:300;
+    font-size:1.5em;
+    border: none;
+    border-bottom: 2px solid black;
+    outline: none;
+    
+}
+input[type=email]:focus {
+    border-bottom: 2px solid #54C2ED;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #EEEEEE;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #EEEEEE;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #EEEEEE;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #EEEEEE;
+}
+input[type=submit] {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    font-family: 'Dosis', sans-serif;
+    border-radius: 6px;
+    font-weight:500;
+    border: 2px solid white;
+    background-color: white;
+    color: black;
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1.1em;
+    cursor: pointer;
+    float:right;
+}
+input[type=submit]:hover {
+    border: 2px solid black;
+
+
+}
+input[type=submit]:active {
+  outline: none;
+  background-color: #54C2ED;
+  border: 2px solid black;
+
+}
+input[type=submit]:focus {
+    outline: none;
+    border: 2px solid black;
+}
+
+
+.flex-item {
+    background-color: tomato;
+    padding: 5px;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    line-height: 20px;
+    color: white;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
