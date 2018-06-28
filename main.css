@@ -47,10 +47,12 @@ body {
 .social-link:hover {
   outline: none;
   color: #DDDDDD;
+  background-color: transparent;
 }
 .social-link:active {
   outline: none;
   color: #54C2ED;
+  background-color: transparent;
 }
 
 p {
