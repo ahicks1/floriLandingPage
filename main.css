@@ -41,7 +41,14 @@ body {
    transition-duration: 0.4s;
    -webkit-text-stroke-width: 2px;
    -webkit-text-stroke-color: black;
-  padding:20px;
+   -webkit-tap-highlight-color: transparent;
+   -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  margin:20px;
   color: #EEEEEE;
 }
 .social-link:hover {
