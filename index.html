@@ -1,15 +1,21 @@
 <!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+
 <html>
 	<head>
 		<title>Flori Companion</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+		<meta name="theme-color" content="#54C2ED">
+
+    <meta property="og:title" content="Flori Companion">
+    <meta property="og:image" content="img/OpenGraphSplash.png">
+    <meta property="og:description" content="The ultimate smart houseplant companion">
+
 		<link rel="stylesheet" href="main.css" />
+		<link rel="icon" type="image/png" href="img/favicon.png" sizes="16x16">
+  	<link rel="icon" type="image/png" href="img/favicon2x.png" sizes="32x32">
+  	<link rel="icon" type="image/png" href="img/favicon6x.png" sizes="96x96">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 		<link href="https://fonts.googleapis.com/css?family=Dosis:300,500" rel="stylesheet">
 		<!--noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript-->
@@ -18,14 +24,14 @@
 
 		<body>
 			<div class="flex-container">
-				<img class="main-logo" src="LogoTransparent.png">
+				<img class="main-logo" src="img/LogoTransparent.png">
 				<p>
 					The ultimate houseplant companion </br> Coming in 2018
 				</p>
-				<form method="post" action="#" class="form">
+				<form method="post" action="#" class="form" id="my-form">
 					<div class="fields">
 						<div class="field">
-							<input type="email" name="email" id="email" placeholder="email address" autocomplete="off" size=30/>
+							<input type="email" name="email" id="email-text" placeholder="email address" autocomplete="off" size=30/>
 						</div>
 
 					</div>
@@ -42,14 +48,32 @@
 		<!-- Scripts -->
 			<script>
 
+				window.onload = function(){
+					var form = document.getElementById('my-form');
+					if (form.attachEvent) {
+    				form.attachEvent("submit", processForm);
+					} else {
+    				form.addEventListener("submit", processForm);
+					}
+				}
 				function printRes(res) {
 					console.log(res)
 				};
-				function handleSubmit() {
+
+				function processForm(e) {
+    			if (e.preventDefault) e.preventDefault();
+					handleSubmit(document.getElementById('email-text').value)
+    			/* do what you want with the form */
+
+    			// You must return false to prevent the default form behavior
+    			return false;
+				}
+
+				function handleSubmit(email) {
 					console.log("Making post");
 					httpPostAsync(
 						"https://script.google.com/macros/s/AKfycbydDFQEO3OWQ7vQGOxHCSMBq90veePvG0rihI6AUPFIDBIOQkQ/dev",
-						"bub@bjn.com",
+						email,
 						printRes
 							)
 				};
@@ -66,8 +90,7 @@
 					//xmlHttp.setRequestHeader("email",email);
 					xmlHttp.send(null);
 				}
-				//https://script.google.com/macros/s/AKfycbydDFQEO3OWQ7vQGOxHCSMBq90veePvG0rihI6AUPFIDBIOQkQ/exec
-				//https://script.google.com/macros/s/AKfycbydDFQEO3OWQ7vQGOxHCSMBq90veePvG0rihI6AUPFIDBIOQkQ/exec
+				
 			</script>
 
 	</body>
