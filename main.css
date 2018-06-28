@@ -20,8 +20,12 @@ body {
     text-align: center;
 }
 
-.form {
+.form-container {
   flex:1;
+}
+
+#thanks-text {
+  display:none;
 }
 
 .main-logo {
@@ -66,7 +70,7 @@ input[type=email] {
     border: none;
     border-bottom: 2px solid black;
     outline: none;
-    
+
 }
 input[type=email]:focus {
     border-bottom: 2px solid #54C2ED;

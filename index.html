@@ -26,8 +26,12 @@
 			<div class="flex-container">
 				<img class="main-logo" src="img/LogoTransparent.png">
 				<p>
-					The ultimate houseplant companion </br> Coming in 2018
+					Coming in 2018 </br> The ultimate smart houseplant companion.
 				</p>
+				<div class="form-container">
+					<p id="thanks-text">
+						Thanks for your interest!
+					</p>
 				<form method="post" action="#" class="form" id="my-form">
 					<div class="fields">
 						<div class="field">
@@ -37,7 +41,7 @@
 					</div>
 					<input type="submit" value="SUBSCRIBE">
 				</form>
-
+			</div>
 				<span class="social-links">
 					<a  class="social-link"href="https://www.facebook.com/floricompanion"><i class="fab fa-facebook-square"></i></a>
 					<a  class="social-link"href="https://twitter.com/floricompanion"><i class="fab fa-twitter-square social-link"></i></a>
@@ -47,9 +51,9 @@
 		</body>
 		<!-- Scripts -->
 			<script>
-
+				var form;
 				window.onload = function(){
-					var form = document.getElementById('my-form');
+					form = document.getElementById('my-form');
 					if (form.attachEvent) {
     				form.attachEvent("submit", processForm);
 					} else {
@@ -63,6 +67,8 @@
 				function processForm(e) {
     			if (e.preventDefault) e.preventDefault();
 					handleSubmit(document.getElementById('email-text').value)
+					form.style.display = "none";
+					document.getElementById('thanks-text').style.display = "block"
     			/* do what you want with the form */
 
     			// You must return false to prevent the default form behavior
@@ -90,7 +96,7 @@
 					//xmlHttp.setRequestHeader("email",email);
 					xmlHttp.send(null);
 				}
-				
+
 			</script>
 
 	</body>
